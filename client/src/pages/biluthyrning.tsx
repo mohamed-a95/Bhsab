@@ -33,7 +33,7 @@ const Biluthyrning = () => {
                 <img 
                   src={car.imgSrc} 
                   alt={car.name} 
-                  className="w-full h-48 object-cover" 
+                  className="w-full h-48 object-contain bg-neutral-100" 
                   width="400" 
                   height="192"
                 />

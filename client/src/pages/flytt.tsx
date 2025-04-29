@@ -76,9 +76,9 @@ const Flytt = () => {
             
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                src="/images/moving-boxes.svg" 
                 alt="Professionell flytthjälp" 
-                className="w-full h-full object-cover" 
+                className="w-full h-full object-contain" 
                 width="800" 
                 height="600"
               />

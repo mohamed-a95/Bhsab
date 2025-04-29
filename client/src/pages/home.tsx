@@ -33,7 +33,7 @@ const Home = () => {
             </div>
             <div className="md:w-1/2 flex justify-center">
               <img 
-                src="https://images.unsplash.com/photo-1581632774577-3481879a282d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                src="/images/hero-image.svg" 
                 alt="BHS Biluthyrning och transport" 
                 className="rounded-lg shadow-xl w-full max-w-md"
                 width="800"
@@ -58,22 +58,22 @@ const Home = () => {
             <ServiceCard 
               title="Biluthyrning" 
               description="Vi erbjuder ett brett utbud av personbilar för uthyrning till konkurrenskraftiga priser."
-              imgSrc="https://images.unsplash.com/photo-1597858520171-563a8e8b9925?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-              imgAlt="Biluthyrning"
+              imgSrc="/images/van.svg"
+              imgAlt="Biluthyrning - Skåpbil"
               link="/biluthyrning"
             />
             <ServiceCard 
               title="Flytthjälp" 
               description="Professionell flytt av hem, kontor eller enstaka möbler med erfarna flyttare."
-              imgSrc="https://images.unsplash.com/photo-1584713503693-bb386ec95cf2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-              imgAlt="Flytthjälp"
+              imgSrc="/images/moving-boxes.svg"
+              imgAlt="Flytthjälp - Flyttlådor"
               link="/flytt"
             />
             <ServiceCard 
               title="Transport" 
               description="Transport av varor och gods med våra skåpbilar och släp för alla typer av leveranser."
-              imgSrc="https://images.unsplash.com/photo-1601628828688-632f38a5a7d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-              imgAlt="Transport"
+              imgSrc="/images/transport-truck.svg"
+              imgAlt="Transport - Lastbil"
               link="/transport"
             />
           </div>
