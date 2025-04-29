@@ -13,17 +13,30 @@ import Transport from "@/pages/transport";
 import Priser from "@/pages/priser";
 import Kontakt from "@/pages/kontakt";
 
+function ScrollToTop() {
+  const [location] = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  
+  return null;
+}
+
 function Router() {
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/biluthyrning" component={Biluthyrning} />
-      <Route path="/flytt" component={Flytt} />
-      <Route path="/transport" component={Transport} />
-      <Route path="/priser" component={Priser} />
-      <Route path="/kontakt" component={Kontakt} />
-      <Route component={NotFound} />
-    </Switch>
+    <>
+      <ScrollToTop />
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/biluthyrning" component={Biluthyrning} />
+        <Route path="/flytt" component={Flytt} />
+        <Route path="/transport" component={Transport} />
+        <Route path="/priser" component={Priser} />
+        <Route path="/kontakt" component={Kontakt} />
+        <Route component={NotFound} />
+      </Switch>
+    </>
   );
 }
 
