@@ -32,6 +32,17 @@ const Transport = () => {
             </p>
           </div>
 
+          {/* Transport Truck Image */}
+          <div className="mb-12 flex justify-center">
+            <img 
+              src="/images/transport-truck.svg" 
+              alt="Transport och leverans med BHS" 
+              className="rounded-lg shadow-xl max-w-full md:max-w-2xl"
+              width="800"
+              height="600"
+            />
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="p-8">
