@@ -4,7 +4,7 @@ export const CarTypes = [
     name: "Personbil (Kompakt)",
     description: "Toyota Yaris eller liknande",
     pricePerDay: "450",
-    imgSrc: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imgSrc: "/images/compact-car.jpg",
     passengers: "4",
     luggage: "2 stora väskor",
     fuelEconomy: "Låg bränsleförbrukning"
@@ -13,7 +13,7 @@ export const CarTypes = [
     name: "Kombi",
     description: "Volvo V60 eller liknande",
     pricePerDay: "650",
-    imgSrc: "https://images.unsplash.com/photo-1609521263047-f8f205293f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imgSrc: "/images/kombi-car.jpg",
     passengers: "5",
     luggage: "4 stora väskor",
     fuelEconomy: "Medel bränsleförbrukning"
@@ -22,7 +22,7 @@ export const CarTypes = [
     name: "Skåpbil",
     description: "Mercedes Sprinter eller liknande",
     pricePerDay: "950",
-    imgSrc: "https://images.unsplash.com/photo-1609752263411-ce73e9e0d14?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    imgSrc: "/images/van.jpg",
     passengers: "3",
     luggage: "15 kubikmeter lastutrymme",
     fuelEconomy: "B-körkort tillräckligt"
