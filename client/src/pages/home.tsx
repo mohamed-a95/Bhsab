@@ -58,21 +58,21 @@ const Home = () => {
             <ServiceCard 
               title="Biluthyrning" 
               description="Vi erbjuder ett brett utbud av personbilar för uthyrning till konkurrenskraftiga priser."
-              imgSrc="/images/van.svg"
-              imgAlt="Biluthyrning - Skåpbil"
+              imgSrc="/images/car-rental.jpg"
+              imgAlt="Biluthyrning - Personbil"
               link="/biluthyrning"
             />
             <ServiceCard 
               title="Flytthjälp" 
               description="Professionell flytt av hem, kontor eller enstaka möbler med erfarna flyttare."
-              imgSrc="/images/moving-boxes.svg"
+              imgSrc="/images/moving-boxes.jpg"
               imgAlt="Flytthjälp - Flyttlådor"
               link="/flytt"
             />
             <ServiceCard 
               title="Transport" 
               description="Transport av varor och gods med våra skåpbilar och släp för alla typer av leveranser."
-              imgSrc="/images/transport-truck.svg"
+              imgSrc="/images/transport-truck.jpg"
               imgAlt="Transport - Lastbil"
               link="/transport"
             />

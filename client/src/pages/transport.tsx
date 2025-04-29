@@ -35,7 +35,7 @@ const Transport = () => {
           {/* Transport Truck Image */}
           <div className="mb-12 flex justify-center">
             <img 
-              src="/images/transport-truck.svg" 
+              src="/images/transport-truck.jpg" 
               alt="Transport och leverans med BHS" 
               className="rounded-lg shadow-xl max-w-full md:max-w-2xl"
               width="800"
