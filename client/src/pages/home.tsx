@@ -8,37 +8,26 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero-section text-white">
         <div className="container mx-auto px-4 py-16 md:py-24">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-8 md:mb-0">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                Din pålitliga partner för<br />bil, flytt och transport
-              </h1>
-              <p className="text-lg md:text-xl opacity-90 mb-8">
-                Vi erbjuder prisvärda och flexibla lösningar för alla dina behov i Stockholm och omnejd.
-              </p>
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Link href="/biluthyrning">
-                  <a className="bg-white text-primary font-medium px-6 py-3 rounded-md shadow hover:bg-neutral-100 transition text-center flex items-center justify-center">
-                    <CarFront className="mr-2 h-5 w-5" />
-                    Hyr bil
-                  </a>
-                </Link>
-                <Link href="/flytt">
-                  <a className="bg-secondary text-white font-medium px-6 py-3 rounded-md shadow hover:bg-red-700 transition text-center flex items-center justify-center">
-                    <PackageCheck className="mr-2 h-5 w-5" />
-                    Boka flytt
-                  </a>
-                </Link>
-              </div>
-            </div>
-            <div className="md:w-1/2 flex justify-center">
-              <img 
-                src="/images/hero-image.svg" 
-                alt="BHS Biluthyrning och transport" 
-                className="rounded-lg shadow-xl w-full max-w-md"
-                width="800"
-                height="600"
-              />
+          <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              Din pålitliga partner för<br />bil, flytt och transport
+            </h1>
+            <p className="text-lg md:text-xl opacity-90 mb-8">
+              Vi erbjuder prisvärda och flexibla lösningar för alla dina behov i Stockholm och omnejd.
+            </p>
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+              <Link href="/biluthyrning">
+                <a className="bg-white text-primary font-medium px-6 py-3 rounded-md shadow hover:bg-neutral-100 transition text-center flex items-center justify-center">
+                  <CarFront className="mr-2 h-5 w-5" />
+                  Hyr bil
+                </a>
+              </Link>
+              <Link href="/flytt">
+                <a className="bg-secondary text-white font-medium px-6 py-3 rounded-md shadow hover:bg-red-700 transition text-center flex items-center justify-center">
+                  <PackageCheck className="mr-2 h-5 w-5" />
+                  Boka flytt
+                </a>
+              </Link>
             </div>
           </div>
         </div>
