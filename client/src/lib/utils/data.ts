@@ -231,13 +231,16 @@ export const RentalPricing = {
   extraInfo: [
     {
       period: "Extra km",
+      plan: null,
       car: "2,35 kr",
       van: "5,00 kr"
     },
     {
       period: "Självriskreducering",
+      plan: null,
       car: "100 kr",
       van: "140 kr"
     }
-  ]
+  ],
+  footerText: "Alla priser är inklusive moms. Självrisk 4000 kr. Körkortstid minst 1 år och minst 20 års ålder."
 };

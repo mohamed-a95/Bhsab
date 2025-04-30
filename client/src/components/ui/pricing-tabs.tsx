@@ -1,42 +1,56 @@
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PriceTable from "./price-table";
+import RentalTable from "./rental-table";
 import { 
   PersonalCarPricing, 
   VanPricing, 
-  TrailerPricing, 
-  MovingPricing 
+  TrailerPricing
 } from "@/lib/utils/data";
 
 const PricingTabs = () => {
-  const [activeTab, setActiveTab] = useState("personbilar");
+  const [activeTab, setActiveTab] = useState("personbilar-minibussar");
   
   return (
-    <Tabs defaultValue="personbilar" className="w-full" onValueChange={setActiveTab}>
-      <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-8">
-        <TabsTrigger value="personbilar" className="data-[state=active]:border-primary data-[state=active]:text-primary">
-          Personbilar
+    <Tabs defaultValue="personbilar-minibussar" className="w-full" onValueChange={setActiveTab}>
+      <TabsList className="grid grid-cols-1 md:grid-cols-3 mb-8">
+        <TabsTrigger 
+          value="personbilar-minibussar" 
+          className="data-[state=active]:border-primary data-[state=active]:text-primary text-base"
+        >
+          Personbilar & Minibussar
         </TabsTrigger>
-        <TabsTrigger value="skapbilar" className="data-[state=active]:border-primary data-[state=active]:text-primary">
+        <TabsTrigger 
+          value="skapbilar" 
+          className="data-[state=active]:border-primary data-[state=active]:text-primary text-base"
+        >
           Skåpbilar
         </TabsTrigger>
-        <TabsTrigger value="slap" className="data-[state=active]:border-primary data-[state=active]:text-primary">
+        <TabsTrigger 
+          value="slap" 
+          className="data-[state=active]:border-primary data-[state=active]:text-primary text-base"
+        >
           Släp & takboxar
-        </TabsTrigger>
-        <TabsTrigger value="flytt-priser" className="data-[state=active]:border-primary data-[state=active]:text-primary">
-          Flytthjälp
         </TabsTrigger>
       </TabsList>
       
-      <TabsContent value="personbilar" className="space-y-4">
-        <PriceTable 
-          data={PersonalCarPricing} 
-          columns={["Fordonstyp", "1 dag", "Helg (fre-mån)", "Vecka (7 dagar)", "Extra per km", ""]} 
-          footerText="Alla priser inkluderar försäkring och 100 km/dag (150 km/dag för helg, 1000 km/vecka). Bränsle tillkommer."
-        />
+      <TabsContent value="personbilar-minibussar" className="space-y-4">
+        <div className="mb-4">
+          <h3 className="text-xl font-bold text-neutral-700 mb-2">Personbilar & Minibussar</h3>
+          <p className="text-neutral-600 mb-4">
+            Vi erbjuder flexibla hyrvillkor för personbilar och minibussar med olika prisplaner beroende på dina behov.
+          </p>
+        </div>
+        <RentalTable />
       </TabsContent>
       
       <TabsContent value="skapbilar" className="space-y-4">
+        <div className="mb-4">
+          <h3 className="text-xl font-bold text-neutral-700 mb-2">Skåpbilar</h3>
+          <p className="text-neutral-600 mb-4">
+            Våra skåpbilar passar perfekt för mindre flyttar och transporter. Alla skåpbilar körs på B-körkort.
+          </p>
+        </div>
         <PriceTable 
           data={VanPricing} 
           columns={["Fordonstyp", "1 dag", "Helg (fre-mån)", "Vecka (7 dagar)", "Extra per km", ""]} 
@@ -45,69 +59,17 @@ const PricingTabs = () => {
       </TabsContent>
       
       <TabsContent value="slap" className="space-y-4">
+        <div className="mb-4">
+          <h3 className="text-xl font-bold text-neutral-700 mb-2">Släp & Takboxar</h3>
+          <p className="text-neutral-600 mb-4">
+            Vi har olika typer av släp och takboxar för att komplettera din bilhyra eller till din egen bil.
+          </p>
+        </div>
         <PriceTable 
           data={TrailerPricing} 
           columns={["Typ", "1 dag", "Helg (fre-mån)", "Vecka (7 dagar)", ""]} 
           footerText="Alla priser inkluderar försäkring. Släpvagnsdrag krävs för hyra av släp. Takräcke krävs för takbox/cykelhållare."
         />
-      </TabsContent>
-      
-      <TabsContent value="flytt-priser" className="space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-lg overflow-hidden shadow-md">
-            <div className="bg-primary text-white py-3 px-6">
-              <h3 className="text-xl font-semibold">Flytthjälp (per timme)</h3>
-            </div>
-            <div className="p-6">
-              <div className="space-y-4">
-                {MovingPricing.hourlyRates.map((rate, index) => (
-                  <div key={index} className="flex justify-between items-center border-b border-neutral-200 pb-3">
-                    <div>
-                      <span className="font-medium">{rate.description}</span>
-                      <p className="text-sm text-neutral-500">{rate.time}</p>
-                    </div>
-                    <span className="font-medium">{rate.price}</span>
-                  </div>
-                ))}
-                <div className="flex justify-between items-center text-neutral-500">
-                  <div>
-                    <span className="font-medium">Helgtillägg</span>
-                    <p className="text-sm">Lördag-söndag</p>
-                  </div>
-                  <span className="font-medium">+30%</span>
-                </div>
-              </div>
-              <div className="mt-6">
-                <a href="/kontakt" className="block text-center bg-secondary text-white font-medium px-4 py-2 rounded-md hover:bg-red-700 transition">Boka flytthjälp</a>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-white rounded-lg overflow-hidden shadow-md">
-            <div className="bg-primary text-white py-3 px-6">
-              <h3 className="text-xl font-semibold">Tilläggstjänster</h3>
-            </div>
-            <div className="p-6">
-              <div className="space-y-4">
-                {MovingPricing.additionalServices.map((service, index) => (
-                  <div key={index} className="flex justify-between items-center border-b border-neutral-200 pb-3">
-                    <div>
-                      <span className="font-medium">{service.name}</span>
-                      <p className="text-sm text-neutral-500">{service.description}</p>
-                    </div>
-                    <span className="font-medium">{service.price}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6">
-                <a href="/kontakt" className="block text-center bg-primary text-white font-medium px-4 py-2 rounded-md hover:bg-blue-700 transition">Begär offert</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="mt-6 text-neutral-600 text-sm">
-          <p>Minsta debitering är 3 timmar för flytthjälp. Transport till och från flyttadressen ingår i priset. Alla priser är inklusive moms.</p>
-        </div>
       </TabsContent>
     </Tabs>
   );
