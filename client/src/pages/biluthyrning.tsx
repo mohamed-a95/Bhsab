@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import RentalTable from "@/components/ui/rental-table";
 
 const Biluthyrning = () => {
   return (
@@ -18,7 +19,7 @@ const Biluthyrning = () => {
       {/* Main Content Section */}
       <section className="py-16 bg-neutral-100">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="bg-white rounded-lg shadow-md p-8 mb-8">
               <h2 className="text-2xl font-bold text-neutral-700 mb-4">Vårt erbjudande</h2>
               <p className="text-neutral-600 mb-6">
@@ -82,12 +83,9 @@ const Biluthyrning = () => {
               </div>
             </div>
 
-            <div className="text-center">
-              <Link href="/priser">
-                <a className="inline-block bg-primary text-white font-medium px-6 py-3 rounded-md hover:bg-blue-700 transition">
-                  Se priser och boka
-                </a>
-              </Link>
+            <div className="mt-12">
+              <h2 className="text-2xl font-bold text-neutral-700 mb-6 text-center">Prislista</h2>
+              <RentalTable />
             </div>
           </div>
         </div>

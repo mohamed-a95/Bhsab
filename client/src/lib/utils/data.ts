@@ -147,6 +147,74 @@ export const MovingPricing = {
     },
     {
       description: "4 flyttare + skåpbil",
+
+// New rental pricing data
+export const RentalPricing = {
+  columns: ["Hyresperiod", "Plan", "Personbil", "Minibuss"],
+  data: [
+    {
+      period: "Dygn",
+      plan: "Inkl. 100 km",
+      car: "379 kr",
+      van: "1 099 kr"
+    },
+    {
+      period: "Dygn",
+      plan: "Fri körsträcka",
+      car: "529 kr",
+      van: "1 099 kr"
+    },
+    {
+      period: "Extra dygn",
+      plan: "Fri körsträcka",
+      car: "489 kr",
+      van: "919 kr"
+    },
+    {
+      period: "Weekend",
+      plan: "Inkl. 300 km",
+      car: "839 kr",
+      van: "1 889 kr"
+    },
+    {
+      period: "Weekend",
+      plan: "Fri körsträcka",
+      car: "1 049 kr",
+      van: "2 399 kr"
+    },
+    {
+      period: "Vecka",
+      plan: "Inkl. 700 km",
+      car: "1 899 kr",
+      van: "4 799 kr"
+    },
+    {
+      period: "Vecka",
+      plan: "Fri körsträcka",
+      car: "2 499 kr",
+      van: "5 099 kr"
+    },
+    {
+      period: "Månad",
+      plan: "Inkl. 2100 km",
+      car: "8 999 kr",
+      van: "14 999 kr"
+    }
+  ],
+  extraInfo: [
+    {
+      period: "Extra km",
+      car: "2,35 kr",
+      van: "5,00 kr"
+    },
+    {
+      period: "Självriskreducering",
+      car: "100 kr",
+      van: "140 kr"
+    }
+  ]
+};
+
       time: "Vardagar 7-18",
       price: "1 250 kr/tim"
     }
