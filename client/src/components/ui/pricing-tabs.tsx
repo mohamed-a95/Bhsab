@@ -13,31 +13,30 @@ const PricingTabs = () => {
   
   return (
     <Tabs defaultValue="personbilar-minibussar" className="w-full" onValueChange={setActiveTab}>
-      <TabsList className="grid grid-cols-1 md:grid-cols-3 mb-8">
+      <TabsList className="grid grid-cols-1 md:grid-cols-3 mb-10 bg-neutral-100 p-1 rounded-lg shadow-sm">
         <TabsTrigger 
           value="personbilar-minibussar" 
-          className="data-[state=active]:border-primary data-[state=active]:text-primary text-base"
+          className="data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border-primary data-[state=active]:text-primary text-base font-medium py-3"
         >
           Personbilar & Minibussar
         </TabsTrigger>
         <TabsTrigger 
           value="skapbilar" 
-          className="data-[state=active]:border-primary data-[state=active]:text-primary text-base"
+          className="data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border-primary data-[state=active]:text-primary text-base font-medium py-3"
         >
           Skåpbilar
         </TabsTrigger>
         <TabsTrigger 
           value="slap" 
-          className="data-[state=active]:border-primary data-[state=active]:text-primary text-base"
+          className="data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border-primary data-[state=active]:text-primary text-base font-medium py-3"
         >
           Släp & takboxar
         </TabsTrigger>
       </TabsList>
       
       <TabsContent value="personbilar-minibussar" className="space-y-4">
-        <div className="mb-4">
-          <h3 className="text-xl font-bold text-neutral-700 mb-2">Personbilar & Minibussar</h3>
-          <p className="text-neutral-600 mb-4">
+        <div className="mb-6">
+          <p className="text-neutral-600">
             Vi erbjuder flexibla hyrvillkor för personbilar och minibussar med olika prisplaner beroende på dina behov.
           </p>
         </div>
@@ -45,9 +44,8 @@ const PricingTabs = () => {
       </TabsContent>
       
       <TabsContent value="skapbilar" className="space-y-4">
-        <div className="mb-4">
-          <h3 className="text-xl font-bold text-neutral-700 mb-2">Skåpbilar</h3>
-          <p className="text-neutral-600 mb-4">
+        <div className="mb-6">
+          <p className="text-neutral-600">
             Våra skåpbilar passar perfekt för mindre flyttar och transporter. Alla skåpbilar körs på B-körkort.
           </p>
         </div>
@@ -59,9 +57,8 @@ const PricingTabs = () => {
       </TabsContent>
       
       <TabsContent value="slap" className="space-y-4">
-        <div className="mb-4">
-          <h3 className="text-xl font-bold text-neutral-700 mb-2">Släp & Takboxar</h3>
-          <p className="text-neutral-600 mb-4">
+        <div className="mb-6">
+          <p className="text-neutral-600">
             Vi har olika typer av släp och takboxar för att komplettera din bilhyra eller till din egen bil.
           </p>
         </div>
