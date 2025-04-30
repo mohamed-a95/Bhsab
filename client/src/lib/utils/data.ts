@@ -147,6 +147,33 @@ export const MovingPricing = {
     },
     {
       description: "4 flyttare + skåpbil",
+      time: "Vardagar 7-18",
+      price: "1 250 kr/tim"
+    }
+  ],
+  additionalServices: [
+    {
+      name: "Packning",
+      description: "Per person och timme",
+      price: "395 kr/tim"
+    },
+    {
+      name: "Flyttstädning",
+      description: "Pris per m²",
+      price: "från 20 kr/m²"
+    },
+    {
+      name: "Emballage",
+      description: "Kartonger, tejp, bubbelplast",
+      price: "Enligt prislista"
+    },
+    {
+      name: "Möbelmontering",
+      description: "Per timme",
+      price: "450 kr/tim"
+    }
+  ]
+};
 
 // New rental pricing data
 export const RentalPricing = {
@@ -211,34 +238,6 @@ export const RentalPricing = {
       period: "Självriskreducering",
       car: "100 kr",
       van: "140 kr"
-    }
-  ]
-};
-
-      time: "Vardagar 7-18",
-      price: "1 250 kr/tim"
-    }
-  ],
-  additionalServices: [
-    {
-      name: "Packning",
-      description: "Per person och timme",
-      price: "395 kr/tim"
-    },
-    {
-      name: "Flyttstädning",
-      description: "Pris per m²",
-      price: "från 20 kr/m²"
-    },
-    {
-      name: "Emballage",
-      description: "Kartonger, tejp, bubbelplast",
-      price: "Enligt prislista"
-    },
-    {
-      name: "Möbelmontering",
-      description: "Per timme",
-      price: "450 kr/tim"
     }
   ]
 };
