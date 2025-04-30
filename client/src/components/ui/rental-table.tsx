@@ -10,7 +10,7 @@ const RentalTable = () => {
           <TableHeader className="bg-primary text-white">
             <TableRow>
               {RentalPricing.columns.map((column, index) => (
-                <TableHead key={index} className="py-4 px-6 text-center text-base font-bold">
+                <TableHead key={index} className="py-5 px-6 text-center text-lg font-bold">
                   {column}
                 </TableHead>
               ))}
@@ -33,9 +33,9 @@ const RentalTable = () => {
         <Table className="min-w-full bg-white rounded-lg overflow-hidden shadow-lg">
           <TableHeader className="bg-neutral-200 text-neutral-800">
             <TableRow>
-              <TableHead className="py-4 px-6 text-base font-bold">Tilläggsavgifter</TableHead>
-              <TableHead className="py-4 px-6 text-center text-base font-bold">Personbil</TableHead>
-              <TableHead className="py-4 px-6 text-center text-base font-bold">Minibuss</TableHead>
+              <TableHead className="py-5 px-6 text-lg font-bold">Tilläggsavgifter</TableHead>
+              <TableHead className="py-5 px-6 text-center text-lg font-bold">Personbil</TableHead>
+              <TableHead className="py-5 px-6 text-center text-lg font-bold">Minibuss</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody className="divide-y divide-neutral-200">

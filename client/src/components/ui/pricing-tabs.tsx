@@ -34,21 +34,11 @@ const PricingTabs = () => {
         </TabsTrigger>
       </TabsList>
       
-      <TabsContent value="personbilar-minibussar" className="space-y-4">
-        <div className="mb-6">
-          <p className="text-neutral-600">
-            Vi erbjuder flexibla hyrvillkor för personbilar och minibussar med olika prisplaner beroende på dina behov.
-          </p>
-        </div>
+      <TabsContent value="personbilar-minibussar" className="mt-8 pt-4">
         <RentalTable />
       </TabsContent>
       
-      <TabsContent value="skapbilar" className="space-y-4">
-        <div className="mb-6">
-          <p className="text-neutral-600">
-            Våra skåpbilar passar perfekt för mindre flyttar och transporter. Alla skåpbilar körs på B-körkort.
-          </p>
-        </div>
+      <TabsContent value="skapbilar" className="mt-8 pt-4">
         <PriceTable 
           data={VanPricing} 
           columns={["Fordonstyp", "1 dag", "Helg (fre-mån)", "Vecka (7 dagar)", "Extra per km", ""]} 
@@ -56,12 +46,7 @@ const PricingTabs = () => {
         />
       </TabsContent>
       
-      <TabsContent value="slap" className="space-y-4">
-        <div className="mb-6">
-          <p className="text-neutral-600">
-            Vi har olika typer av släp och takboxar för att komplettera din bilhyra eller till din egen bil.
-          </p>
-        </div>
+      <TabsContent value="slap" className="mt-8 pt-4">
         <PriceTable 
           data={TrailerPricing} 
           columns={["Typ", "1 dag", "Helg (fre-mån)", "Vecka (7 dagar)", ""]} 
