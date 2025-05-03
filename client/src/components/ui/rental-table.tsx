@@ -10,7 +10,7 @@ const RentalTable = () => {
           <TableHeader className="bg-primary text-white">
             <TableRow>
               {RentalPricing.columns.map((column, index) => (
-                <TableHead key={index} className="py-5 px-6 text-center text-lg font-bold">
+                <TableHead key={index} className="py-5 px-6 text-center text-lg font-bold text-white">
                   {column}
                 </TableHead>
               ))}
