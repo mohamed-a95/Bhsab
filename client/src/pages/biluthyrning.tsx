@@ -16,6 +16,21 @@ const Biluthyrning = () => {
         </div>
       </section>
 
+      {/* Car Image Section */}
+      <section className="py-8">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-center">
+            <img
+              src="/images/car-rental.jpg"
+              alt="Biluthyrning hos BHS"
+              className="rounded-lg shadow-xl max-w-full md:max-w-3xl object-cover"
+              width="1024"
+              height="576"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Main Content Section */}
       <section className="py-16 bg-neutral-100">
         <div className="container mx-auto px-4">
