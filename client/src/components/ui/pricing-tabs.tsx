@@ -16,19 +16,19 @@ const PricingTabs = () => {
       <TabsList className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-10 bg-neutral-100 p-1 rounded-lg shadow-sm">
         <TabsTrigger 
           value="personbilar-minibussar" 
-          className="text-base font-medium py-3 transition-all hover:bg-white/50 data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:text-primary"
+          className="text-base font-medium py-3 transition-all bg-neutral-100 hover:bg-white/50 data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:text-primary"
         >
           Personbilar & Minibussar
         </TabsTrigger>
         <TabsTrigger 
           value="skapbilar" 
-          className="text-base font-medium py-3 transition-all hover:bg-white/50 data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:text-primary"
+          className="text-base font-medium py-3 transition-all bg-neutral-100 hover:bg-white/50 data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:text-primary"
         >
           Skåpbilar
         </TabsTrigger>
         <TabsTrigger 
           value="slap" 
-          className="text-base font-medium py-3 transition-all hover:bg-white/50 data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:text-primary"
+          className="text-base font-medium py-3 transition-all bg-neutral-100 hover:bg-white/50 data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:text-primary"
         >
           Släp och Takbox
         </TabsTrigger>
