@@ -10,7 +10,7 @@ import {
 
 const PricingTabs = () => {
   const [activeTab, setActiveTab] = useState("personbilar-minibussar");
-  
+
   return (
     <Tabs defaultValue="personbilar-minibussar" className="w-full" onValueChange={setActiveTab}>
       <TabsList className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-10 bg-neutral-100 p-1 rounded-lg shadow-sm">
@@ -33,11 +33,11 @@ const PricingTabs = () => {
           Släp och Takbox
         </TabsTrigger>
       </TabsList>
-      
+
       <TabsContent value="personbilar-minibussar" className="mt-8 pt-4">
         <RentalTable />
       </TabsContent>
-      
+
       <TabsContent value="skapbilar" className="mt-8 pt-4">
         <PriceTable 
           data={VanPricing} 
@@ -45,7 +45,7 @@ const PricingTabs = () => {
           footerText="Alla priser inkluderar försäkring och 100 km/dag (150 km/dag för helg, 1000 km/vecka). Bränsle tillkommer. B-körkort gäller för alla skåpbilar."
         />
       </TabsContent>
-      
+
       <TabsContent value="slap" className="mt-8 pt-4">
         <PriceTable 
           data={TrailerPricing} 
