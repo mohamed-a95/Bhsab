@@ -96,39 +96,22 @@ export const VanPricing = [
 // Trailer pricing data
 export const TrailerPricing = [
   {
-    name: "Öppet släp (litet)",
-    description: "Max 500 kg",
-    day: "250 kr",
-    weekend: "600 kr",
-    week: "1 400 kr"
+    name: "Täckt flyttsläp",
+    description: "11m³ lastutrymme",
+    shortTerm: "200 kr",
+    day: "339 kr",
+    weekend: "949 kr",
+    week: "1 699 kr",
+    insurance: "35 kr/dygn"
   },
   {
-    name: "Öppet släp (stort)",
-    description: "Max 750 kg",
-    day: "350 kr",
-    weekend: "850 kr",
-    week: "1 800 kr"
-  },
-  {
-    name: "Täckt släp",
-    description: "Med kåpa, max 750 kg",
-    day: "450 kr",
-    weekend: "1 100 kr",
-    week: "2 300 kr"
-  },
-  {
-    name: "Takbox",
-    description: "400-500 liter",
-    day: "150 kr",
-    weekend: "350 kr",
-    week: "800 kr"
-  },
-  {
-    name: "Cykelhållare",
-    description: "För 2-4 cyklar",
-    day: "100 kr",
-    weekend: "250 kr",
-    week: "600 kr"
+    name: "Thule Ocean 700",
+    description: "Takbox",
+    base: "159 kr",
+    day: "70 kr",
+    twoDays: "159 kr",
+    weekend: "238 kr",
+    week: "549 kr"
   }
 ];
 
