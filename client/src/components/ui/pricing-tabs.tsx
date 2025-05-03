@@ -52,6 +52,14 @@ const PricingTabs = () => {
         />
       </TabsContent>
       
+      <TabsContent value="slap-och-takbox" className="mt-8 pt-4">
+        <PriceTable 
+          data={TrailerPricing} 
+          columns={["Typ", "1 dag", "Helg (fre-mån)", "Vecka (7 dagar)", ""]} 
+          footerText="Alla priser inkluderar försäkring. Släpvagnsdrag krävs för hyra av släp. Takräcke krävs för takbox/cykelhållare."
+        />
+      </TabsContent>
+
       <TabsContent value="slap" className="mt-8 pt-4">
         <PriceTable 
           data={TrailerPricing} 
