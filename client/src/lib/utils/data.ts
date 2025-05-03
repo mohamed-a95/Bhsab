@@ -102,7 +102,11 @@ export const TrailerPricing = [
     day: "339 kr",
     weekend: "949 kr",
     week: "1 699 kr",
-    insurance: "35 kr/dygn"
+    insurance: "35 kr/dygn",
+    weekendRules: [
+      "Hämtar du släpet/takboxen innan kl. 12 på fredag ska den återlämnas samma tid på måndag.",
+      "Hämtar du släpet/takboxen efter kl. 12 på fredag ska den återlämnas senast kl. 12 på måndag."
+    ]
   },
   {
     name: "Thule Ocean 700",

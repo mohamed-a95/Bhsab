@@ -49,8 +49,8 @@ const PricingTabs = () => {
       <TabsContent value="slap" className="mt-8 pt-4">
         <PriceTable 
           data={TrailerPricing} 
-          columns={["Typ", "Korttid/Grundavgift", "1 dag", "Helg (fre-mån)", "Vecka (7 dagar)", "Övrigt", ""]} 
-          footerText="Weekend: Hämtar du släpet/takboxen innan kl. 12 på fredag ska den återlämnas samma tid på måndag. Hämtar du efter kl. 12 på fredag ska den återlämnas senast kl. 12 på måndag. Släpvagnsdrag krävs för hyra av släp. Takräcke krävs för takbox."
+          columns={["Typ", "Korttid (0-4h)/Grundavgift", "Dygn", "2 Dygn", "Helg (fre-mån)", "Vecka", "Självriskreducering", ""]} 
+          footerText="Släpvagnsdrag krävs för hyra av släp. Takräcke krävs för takbox."
         />
       </TabsContent>
     </Tabs>
