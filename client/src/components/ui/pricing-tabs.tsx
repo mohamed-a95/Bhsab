@@ -13,7 +13,7 @@ const PricingTabs = () => {
   
   return (
     <Tabs defaultValue="personbilar-minibussar" className="w-full" onValueChange={setActiveTab}>
-      <TabsList className="grid grid-cols-1 md:grid-cols-3 mb-10 bg-neutral-100 p-1 rounded-lg shadow-sm">
+      <TabsList className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-10 bg-neutral-100 p-1 rounded-lg shadow-sm">
         <TabsTrigger 
           value="personbilar-minibussar" 
           className="data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border-primary data-[state=active]:text-primary text-base font-medium py-3"
@@ -27,16 +27,10 @@ const PricingTabs = () => {
           Skåpbilar
         </TabsTrigger>
         <TabsTrigger 
-          value="slap-och-takbox" 
-          className="data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border-primary data-[state=active]:text-primary text-base font-medium py-3"
-        >
-          Släp och Takbox
-        </TabsTrigger>
-        <TabsTrigger 
           value="slap" 
           className="data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border-primary data-[state=active]:text-primary text-base font-medium py-3"
         >
-          Släp & takboxar
+          Släp och Takbox
         </TabsTrigger>
       </TabsList>
       
@@ -52,14 +46,6 @@ const PricingTabs = () => {
         />
       </TabsContent>
       
-      <TabsContent value="slap-och-takbox" className="mt-8 pt-4">
-        <PriceTable 
-          data={TrailerPricing} 
-          columns={["Typ", "1 dag", "Helg (fre-mån)", "Vecka (7 dagar)", ""]} 
-          footerText="Alla priser inkluderar försäkring. Släpvagnsdrag krävs för hyra av släp. Takräcke krävs för takbox/cykelhållare."
-        />
-      </TabsContent>
-
       <TabsContent value="slap" className="mt-8 pt-4">
         <PriceTable 
           data={TrailerPricing} 
