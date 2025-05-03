@@ -19,14 +19,15 @@ const Biluthyrning = () => {
       {/* Car Image Section */}
       <section className="py-8">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center">
+          <div className="flex flex-col items-center">
             <img
-              src="/images/car-rental.jpg"
-              alt="Biluthyrning hos BHS"
+              src="/images/van.jpg"
+              alt="Biluthyrning hos BHS - Mercedes Sprinter"
               className="rounded-lg shadow-xl max-w-full md:max-w-3xl object-cover"
               width="1024"
               height="576"
             />
+            <p className="text-neutral-600 mt-4 text-center">Mercedes Sprinter eller liknande</p>
           </div>
         </div>
       </section>
