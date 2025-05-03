@@ -27,6 +27,12 @@ const PricingTabs = () => {
           Skåpbilar
         </TabsTrigger>
         <TabsTrigger 
+          value="slap-och-takbox" 
+          className="data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border-primary data-[state=active]:text-primary text-base font-medium py-3"
+        >
+          Släp och Takbox
+        </TabsTrigger>
+        <TabsTrigger 
           value="slap" 
           className="data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border-primary data-[state=active]:text-primary text-base font-medium py-3"
         >
