@@ -24,7 +24,7 @@ const PriceTable = ({ data, columns, footerText }: PriceTableProps) => {
           <TableHeader className="bg-primary text-white">
             <TableRow>
               {columns.map((column, index) => (
-                <TableHead key={index} className={`py-5 px-6 text-lg font-bold ${index === 0 ? "text-left" : "text-center"}`}>
+                <TableHead key={index} className={`py-5 px-6 text-lg font-bold text-white ${index === 0 ? "text-left" : "text-center"}`}>
                   {column}
                 </TableHead>
               ))}
