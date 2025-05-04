@@ -18,51 +18,64 @@ Kopiera `.env.local.example` till `.env.local` och anpassa värdena:
 cp .env.local.example .env.local
 ```
 
-## 3. Starta utvecklingsservern
+## 3. Uppdatera package.json-scripts
+
+För att säkerställa att Vite används korrekt, ändra följande scripts i package.json:
+
+```json
+"scripts": {
+  "dev": "cross-env NODE_ENV=development tsx server/index.ts",
+  "dev:win": "set NODE_ENV=development&& tsx server/index.ts",
+  "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+  "build:client": "vite build",
+  "build:server": "esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+  "start": "cross-env NODE_ENV=production node dist/index.js",
+  "start:win": "set NODE_ENV=production&& node dist/index.js",
+  "check": "tsc",
+  "preview": "vite preview"
+}
+```
+
+Notera att den nuvarande scriptet:
+```
+"build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+```
+
+Bygger både frontend (med Vite) och backend (med esbuild). Detta är korrekt och bör behållas.
+
+## 4. Starta utvecklingsservern
 
 ### På macOS/Linux:
 ```bash
-# Lägg till detta i package.json scripts
-# "dev": "cross-env NODE_ENV=development tsx server/index.ts"
 npm run dev
 ```
 
 ### På Windows:
 ```bash
-# Skapa ett nytt script i package.json
-# "dev:win": "set NODE_ENV=development&& tsx server/index.ts"
 npm run dev:win
 ```
 
-## 4. Bygg för produktion
+## 5. Bygg för produktion
 
-### På macOS/Linux:
 ```bash
 npm run build
 ```
 
-### På Windows:
-```bash
-npm run build
-```
+Detta kommando bygger både frontend med Vite och backend med esbuild.
 
-## 5. Starta produktionsservern
+## 6. Starta produktionsservern
 
 ### På macOS/Linux:
 ```bash
-# Lägg till detta i package.json scripts
-# "start": "cross-env NODE_ENV=production node dist/index.js"
 npm start
 ```
 
 ### På Windows:
 ```bash
-# Skapa ett nytt script i package.json
-# "start:win": "set NODE_ENV=production&& node dist/index.js"
 npm run start:win
 ```
 
-## 6. Deployment på Vercel
+## 7. Deployment på Vercel
 
 För att deploya projektet på Vercel via GitHub:
 
@@ -84,3 +97,12 @@ För att deploya projektet på Vercel via GitHub:
 6. Deploya projektet
 
 Vercel kommer att hantera resten via `vercel.json`-konfigurationen som finns i projektet.
+
+## Anmärkningar om build-processen
+
+Projektet använder följande byggprocess:
+
+1. **Frontend (React)**: Byggs med Vite (`vite build`) och hamnar i `dist/public`
+2. **Backend (Express)**: Byggs med esbuild och hamnar i `dist/`-roten
+
+När du kör i produktion startar du bara Node.js med entry-point `dist/index.js` som kommer att servera både API:et och den byggda frontend-appen.
