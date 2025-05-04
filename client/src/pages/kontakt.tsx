@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
 import { z } from "zod";
-import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { 
   Form, 
@@ -40,6 +38,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 const Kontakt = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
   
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -53,29 +52,39 @@ const Kontakt = () => {
     }
   });
 
-  const contactMutation = useMutation({
-    mutationFn: (data: ContactFormValues) => {
-      return apiRequest("POST", "/api/contact", data);
-    },
-    onSuccess: () => {
-      toast({
-        title: "Tack för din förfrågan!",
-        description: "Vi återkommer till dig så snart som möjligt."
-      });
-      form.reset();
-    },
-    onError: (error) => {
-      toast({
-        title: "Något gick fel",
-        description: error.message || "Kunde inte skicka din förfrågan. Försök igen senare.",
-        variant: "destructive"
-      });
-    }
-  });
+  // Funktion för att generera ett mailto-format
+  const generateMailtoLink = (data: ContactFormValues): string => {
+    const subject = encodeURIComponent(`Förfrågan: ${data.service}`);
+    const body = encodeURIComponent(
+      `Namn: ${data.name}\n` +
+      `E-post: ${data.email}\n` +
+      `Telefon: ${data.phone}\n` +
+      `Tjänst: ${data.service}\n\n` +
+      `Meddelande:\n${data.message}`
+    );
+    return `mailto:info@bhs.se?subject=${subject}&body=${body}`;
+  };
 
   function onSubmit(data: ContactFormValues) {
     setIsSubmitting(true);
-    contactMutation.mutate(data);
+    
+    // Simulera en server-förfrågan
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setFormSubmitted(true);
+      
+      // Visa en success toast
+      toast({
+        title: "Tack för din förfrågan!",
+        description: "Klicka på länken nedan för att öppna din e-postklient och skicka meddelandet.",
+      });
+      
+      // Öppna mailto-länk i en ny flik
+      const mailtoLink = generateMailtoLink(data);
+      window.open(mailtoLink, "_blank");
+      
+      form.reset();
+    }, 1000);
   }
 
   return (
@@ -220,9 +229,9 @@ const Kontakt = () => {
                     <Button 
                       type="submit" 
                       className="bg-secondary hover:bg-red-700 w-full md:w-auto"
-                      disabled={isSubmitting || contactMutation.isPending}
+                      disabled={isSubmitting}
                     >
-                      {contactMutation.isPending ? "Skickar..." : "Skicka förfrågan"}
+                      {isSubmitting ? "Skickar..." : "Skicka förfrågan"}
                     </Button>
                   </form>
                 </Form>
