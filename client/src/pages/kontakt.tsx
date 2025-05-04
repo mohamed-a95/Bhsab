@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
 import { z } from "zod";
-import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { 
   Form, 
@@ -66,12 +64,9 @@ const Kontakt = () => {
     return `mailto:info@bhs.se?subject=${subject}&body=${body}`;
   };
 
-  // Använder React Query för att hantera formuläret, men simulerar en backend-anslutning
-  const contactMutation = useMutation({
-    mutationFn: (data: ContactFormValues) => {
-      return apiRequest("POST", "/contact", data);
-    },
-    onSuccess: (_, data) => {
+  // Hanterar e-postavisering direkt utan backend
+  const handleContactSubmit = (data: ContactFormValues) => {
+    try {
       toast({
         title: "Tack för din förfrågan!",
         description: "Klicka på länken nedan för att öppna din e-postklient och skicka meddelandet."
@@ -83,20 +78,19 @@ const Kontakt = () => {
       
       form.reset();
       setIsSubmitting(false);
-    },
-    onError: (error) => {
+    } catch (error) {
       toast({
         title: "Något gick fel",
-        description: error.message || "Kunde inte skicka din förfrågan. Försök igen senare.",
+        description: "Kunde inte öppna e-postklienten. Kontrollera dina inställningar.",
         variant: "destructive"
       });
       setIsSubmitting(false);
     }
-  });
+  };
 
   function onSubmit(data: ContactFormValues) {
     setIsSubmitting(true);
-    contactMutation.mutate(data);
+    handleContactSubmit(data);
   }
 
   return (
