@@ -50,7 +50,7 @@ const MobileMenu = ({ isOpen, onClose, currentPath }: MobileMenuProps) => {
           isActive={currentPath === "/transport"} 
           onClick={handleLinkClick}
         >
-          Transport
+          Transport och bud
         </MobileLink>
         <MobileLink 
           href="/kontakt" 
