@@ -44,10 +44,9 @@ const Header = ({ currentPath }: HeaderProps) => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
             <NavLink href="/" isActive={currentPath === "/"}>Hem</NavLink>
-            <NavLink href="/biluthyrning" isActive={currentPath === "/biluthyrning"}>Biluthyrning</NavLink>
+            <NavLink href="/biluthyrning" isActive={currentPath === "/biluthyrning" || currentPath === "/priser"}>Biluthyrning</NavLink>
             <NavLink href="/flytt" isActive={currentPath === "/flytt"}>Flytt</NavLink>
             <NavLink href="/transport" isActive={currentPath === "/transport"}>Transport</NavLink>
-            <NavLink href="/priser" isActive={currentPath === "/priser"}>Priser</NavLink>
             <NavLink href="/kontakt" isActive={currentPath === "/kontakt"}>Kontakt</NavLink>
           </nav>
 

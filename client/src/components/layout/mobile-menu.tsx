@@ -24,7 +24,7 @@ const MobileMenu = ({ isOpen, onClose, currentPath }: MobileMenuProps) => {
         </MobileLink>
         <MobileLink 
           href="/biluthyrning" 
-          isActive={currentPath === "/biluthyrning"} 
+          isActive={currentPath === "/biluthyrning" || currentPath === "/priser"} 
           onClick={handleLinkClick}
         >
           Biluthyrning
@@ -42,13 +42,6 @@ const MobileMenu = ({ isOpen, onClose, currentPath }: MobileMenuProps) => {
           onClick={handleLinkClick}
         >
           Transport
-        </MobileLink>
-        <MobileLink 
-          href="/priser" 
-          isActive={currentPath === "/priser"} 
-          onClick={handleLinkClick}
-        >
-          Priser
         </MobileLink>
         <MobileLink 
           href="/kontakt" 
@@ -78,17 +71,16 @@ interface MobileLinkProps {
 
 const MobileLink = ({ href, isActive, onClick, children }: MobileLinkProps) => {
   return (
-    <Link href={href}>
-      <a 
-        className={`${
-          isActive 
-            ? 'text-primary bg-neutral-100' 
-            : 'text-neutral-600 hover:text-primary hover:bg-neutral-100'
-        } font-medium px-4 py-2 rounded mx-4`}
-        onClick={onClick}
-      >
-        {children}
-      </a>
+    <Link 
+      href={href}
+      className={`${
+        isActive 
+          ? 'text-primary bg-neutral-100' 
+          : 'text-neutral-600 hover:text-primary hover:bg-neutral-100'
+      } font-medium px-4 py-2 rounded mx-4 block`}
+      onClick={onClick}
+    >
+      {children}
     </Link>
   );
 };

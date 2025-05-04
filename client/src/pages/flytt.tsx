@@ -88,112 +88,63 @@ const Flytt = () => {
           <div className="bg-neutral-100 p-8 rounded-lg shadow">
             <h3 className="text-2xl font-semibold text-neutral-700 mb-6 text-center">Våra flyttpaket</h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow">
-                <div className="text-center mb-4">
-                  <h4 className="text-xl font-semibold text-neutral-700">Baspaket</h4>
-                  <p className="text-primary text-2xl font-bold mt-2">Från 3 500 kr</p>
-                </div>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Transport med skåpbil</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>2 flyttare</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Bärhjälp</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Grundförsäkring</span>
-                  </li>
-                  <li className="flex items-start">
-                    <X className="h-4 w-4 text-red-500 mr-2 mt-1" />
-                    <span>Packmaterial ingår ej</span>
-                  </li>
-                </ul>
-                <Link href="/kontakt">
-                  <a className="block text-center bg-primary text-white font-medium px-4 py-2 rounded-md hover:bg-blue-700 transition">
-                    Boka
-                  </a>
-                </Link>
+            <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+              <div className="flex items-center justify-center mb-6">
+                <Calendar className="h-10 w-10 text-primary mr-4" />
+                <h4 className="text-xl font-semibold text-neutral-700">Skräddarsydda flyttlösningar</h4>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-lg border-2 border-primary relative">
-                <div className="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 transform translate-y-(-50%)">
-                  POPULÄR
+              <p className="text-neutral-600 text-center mb-6">
+                Varje flytt är unik med olika behov och förutsättningar. Vi erbjuder därför skräddarsydda flyttlösningar 
+                baserade på dina specifika krav. Kontakta oss för en kostnadsfri offert där vi tar hänsyn till:
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                <div className="bg-neutral-50 p-4 rounded-lg">
+                  <div className="flex items-center">
+                    <Check className="h-5 w-5 text-green-500 mr-2" />
+                    <span className="font-medium">Flyttprojektets omfattning</span>
+                  </div>
                 </div>
-                <div className="text-center mb-4">
-                  <h4 className="text-xl font-semibold text-neutral-700">Standardpaket</h4>
-                  <p className="text-primary text-2xl font-bold mt-2">Från 5 900 kr</p>
+                <div className="bg-neutral-50 p-4 rounded-lg">
+                  <div className="flex items-center">
+                    <Check className="h-5 w-5 text-green-500 mr-2" />
+                    <span className="font-medium">Antal rum och möbler</span>
+                  </div>
                 </div>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Transport med skåpbil</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>2-3 flyttare</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Bärhjälp</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Grundläggande packmaterial</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Fullständig försäkring</span>
-                  </li>
-                </ul>
-                <Link href="/kontakt">
-                  <a className="block text-center bg-secondary text-white font-medium px-4 py-2 rounded-md hover:bg-red-700 transition">
-                    Boka
-                  </a>
-                </Link>
+                <div className="bg-neutral-50 p-4 rounded-lg">
+                  <div className="flex items-center">
+                    <Check className="h-5 w-5 text-green-500 mr-2" />
+                    <span className="font-medium">Flyttsträcka</span>
+                  </div>
+                </div>
+                <div className="bg-neutral-50 p-4 rounded-lg">
+                  <div className="flex items-center">
+                    <Check className="h-5 w-5 text-green-500 mr-2" />
+                    <span className="font-medium">Packnings- och bärtjänster</span>
+                  </div>
+                </div>
+                <div className="bg-neutral-50 p-4 rounded-lg">
+                  <div className="flex items-center">
+                    <Check className="h-5 w-5 text-green-500 mr-2" />
+                    <span className="font-medium">Behov av specialtransport</span>
+                  </div>
+                </div>
+                <div className="bg-neutral-50 p-4 rounded-lg">
+                  <div className="flex items-center">
+                    <Check className="h-5 w-5 text-green-500 mr-2" />
+                    <span className="font-medium">Önskad försäkringsnivå</span>
+                  </div>
+                </div>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow">
-                <div className="text-center mb-4">
-                  <h4 className="text-xl font-semibold text-neutral-700">Premiumpaket</h4>
-                  <p className="text-primary text-2xl font-bold mt-2">Från 9 800 kr</p>
-                </div>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Transport med skåpbil</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>3-4 flyttare</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Komplett packning</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Allt packmaterial ingår</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Möbelmontering</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Premium försäkring</span>
-                  </li>
-                </ul>
+              <div className="text-center">
                 <Link href="/kontakt">
-                  <a className="block text-center bg-primary text-white font-medium px-4 py-2 rounded-md hover:bg-blue-700 transition">
-                    Boka
+                  <a className="inline-flex items-center bg-secondary text-white font-medium px-6 py-3 rounded-md hover:bg-red-700 transition">
+                    Kontakta oss för offert
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
                   </a>
                 </Link>
               </div>
