@@ -240,8 +240,8 @@ const Kontakt = () => {
                     <MapPin className="text-primary mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Adress</p>
-                      <p className="text-neutral-600">Industrivägen 8</p>
-                      <p className="text-neutral-600">175 45 Stockholm</p>
+                      <p className="text-neutral-600">Honnörsgatan 6</p>
+                      <p className="text-neutral-600">170 69 Solna</p>
                     </div>
                   </div>
                   
