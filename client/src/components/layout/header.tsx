@@ -37,7 +37,6 @@ const Header = ({ currentPath }: HeaderProps) => {
           <div className="flex items-center space-x-2">
             <Link href="/" className="flex items-center">
               <div className="bg-primary text-white font-bold text-xl px-3 py-2 rounded">BHS</div>
-              <span className="ml-2 text-primary font-semibold hidden sm:inline">Biluthyrning transport och service</span>
             </Link>
           </div>
 
