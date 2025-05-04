@@ -60,8 +60,7 @@ const Kontakt = () => {
     onSuccess: () => {
       toast({
         title: "Tack för din förfrågan!",
-        description: "Vi återkommer till dig så snart som möjligt.",
-        variant: "success"
+        description: "Vi återkommer till dig så snart som möjligt."
       });
       form.reset();
     },
@@ -168,8 +167,7 @@ const Kontakt = () => {
                               <SelectContent>
                                 <SelectItem value="biluthyrning">Biluthyrning</SelectItem>
                                 <SelectItem value="flytt">Flytthjälp</SelectItem>
-                                <SelectItem value="transport">Transport</SelectItem>
-                                <SelectItem value="slap">Släp & takboxar</SelectItem>
+                                <SelectItem value="transport">Transport och Bud</SelectItem>
                                 <SelectItem value="annan">Annan tjänst</SelectItem>
                               </SelectContent>
                             </Select>
