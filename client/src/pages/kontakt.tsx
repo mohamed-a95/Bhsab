@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useMutation } from "@tanstack/react-query";
 import { z } from "zod";
+import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { 
   Form, 
@@ -38,7 +40,6 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 const Kontakt = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formSubmitted, setFormSubmitted] = useState(false);
   
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -65,18 +66,15 @@ const Kontakt = () => {
     return `mailto:info@bhs.se?subject=${subject}&body=${body}`;
   };
 
-  function onSubmit(data: ContactFormValues) {
-    setIsSubmitting(true);
-    
-    // Simulera en server-förfrågan
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormSubmitted(true);
-      
-      // Visa en success toast
+  // Använder React Query för att hantera formuläret, men simulerar en backend-anslutning
+  const contactMutation = useMutation({
+    mutationFn: (data: ContactFormValues) => {
+      return apiRequest("POST", "/contact", data);
+    },
+    onSuccess: (_, data) => {
       toast({
         title: "Tack för din förfrågan!",
-        description: "Klicka på länken nedan för att öppna din e-postklient och skicka meddelandet.",
+        description: "Klicka på länken nedan för att öppna din e-postklient och skicka meddelandet."
       });
       
       // Öppna mailto-länk i en ny flik
@@ -84,7 +82,21 @@ const Kontakt = () => {
       window.open(mailtoLink, "_blank");
       
       form.reset();
-    }, 1000);
+      setIsSubmitting(false);
+    },
+    onError: (error) => {
+      toast({
+        title: "Något gick fel",
+        description: error.message || "Kunde inte skicka din förfrågan. Försök igen senare.",
+        variant: "destructive"
+      });
+      setIsSubmitting(false);
+    }
+  });
+
+  function onSubmit(data: ContactFormValues) {
+    setIsSubmitting(true);
+    contactMutation.mutate(data);
   }
 
   return (
