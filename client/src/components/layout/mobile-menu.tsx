@@ -22,35 +22,21 @@ const MobileMenu = ({ isOpen, onClose, currentPath }: MobileMenuProps) => {
         >
           Hem
         </MobileLink>
-        <div>
-          <MobileLink 
-            href="/biluthyrning" 
-            isActive={currentPath === "/biluthyrning" || currentPath === "/priser"} 
-            onClick={handleLinkClick}
-          >
-            Biluthyrning
-          </MobileLink>
-          
-          {/* Submenu */}
-          <div className="pl-6 ml-4 my-1 border-l-2 border-neutral-200">
-            <MobileLink 
-              href="/biluthyrning" 
-              isActive={currentPath === "/biluthyrning"} 
-              onClick={handleLinkClick}
-              className="text-sm py-1.5"
-            >
-              Översikt
-            </MobileLink>
-            <MobileLink 
-              href="/priser" 
-              isActive={currentPath === "/priser"} 
-              onClick={handleLinkClick}
-              className="text-sm py-1.5"
-            >
-              Prislista
-            </MobileLink>
-          </div>
-        </div>
+        <MobileLink 
+          href="/biluthyrning" 
+          isActive={currentPath === "/biluthyrning"} 
+          onClick={handleLinkClick}
+        >
+          Biluthyrning
+        </MobileLink>
+        
+        <MobileLink 
+          href="/priser" 
+          isActive={currentPath === "/priser"} 
+          onClick={handleLinkClick}
+        >
+          Prislista
+        </MobileLink>
         
         <MobileLink 
           href="/flytt" 
