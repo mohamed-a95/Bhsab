@@ -15,9 +15,9 @@ const Transport = () => {
       <section className="bg-primary bg-opacity-95 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">Transport</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">Transport och bud</h1>
             <p className="text-lg opacity-90">
-              Vi erbjuder transportlösningar för både privatpersoner och företag, från mindre leveranser till större godstransporter.
+              Vi erbjuder transport- och budlösningar för både privatpersoner och företag, från mindre leveranser till större varutransporter.
             </p>
           </div>
         </div>
@@ -47,28 +47,28 @@ const Transport = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="p-8">
-                <h3 className="text-2xl font-semibold text-neutral-700 mb-4">Godstransport</h3>
+                <h3 className="text-2xl font-semibold text-neutral-700 mb-4">Varutransport och budtjänster</h3>
                 <p className="text-neutral-600 mb-6">
-                  Vi transporterar gods av alla storlekar med våra skåpbilar och lastbilar. 
-                  Våra erfarna chaufförer ser till att ditt gods levereras säkert och i tid.
+                  Vi transporterar varor av alla storlekar med våra skåpbilar och lastbilar. 
+                  Våra erfarna chaufförer erbjuder både planerade transporter och snabba budtjänster.
                 </p>
                 
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
                     <Truck className="text-primary h-5 w-5 mt-1 mr-3 flex-shrink-0" />
-                    <span>Leveranser inom hela Stockholm och omnejd</span>
+                    <span>Transport och budtjänster inom hela Stockholm och omnejd</span>
                   </li>
                   <li className="flex items-start">
                     <PackageOpen className="text-primary h-5 w-5 mt-1 mr-3 flex-shrink-0" />
-                    <span>Transport av möbler, varor och annat gods</span>
+                    <span>Transport av möbler, varor och expressbud</span>
                   </li>
                   <li className="flex items-start">
                     <Briefcase className="text-primary h-5 w-5 mt-1 mr-3 flex-shrink-0" />
-                    <span>Företagstransporter med regelbundna leveranser</span>
+                    <span>Företagstransporter och regelbundna budtjänster</span>
                   </li>
                   <li className="flex items-start">
                     <Clock className="text-primary h-5 w-5 mt-1 mr-3 flex-shrink-0" />
-                    <span>Expresstransport och tidsbokade leveranser</span>
+                    <span>Express- och direktbud med garanterad leveranstid</span>
                   </li>
                 </ul>
                 
