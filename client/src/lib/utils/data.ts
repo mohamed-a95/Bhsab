@@ -68,28 +68,56 @@ export const PersonalCarPricing = [
 // Van pricing data
 export const VanPricing = [
   {
-    name: "Liten skåpbil",
-    description: "VW Caddy eller liknande (3.5m³)",
-    day: "750 kr",
-    weekend: "1 800 kr",
-    week: "4 000 kr",
-    extraPerKm: "2,50 kr"
+    name: "Lastbil 1",
+    description: "11 m³",
+    shortTerm: "529 kr",
+    day: "839 kr",
+    day1: "1 899 kr",
+    day2: "1 319 kr",
+    week: "5 479 kr",
+    weekFree: "6 799 kr",
+    month: "15 999 kr",
+    extraPerKm: "5,0 kr",
+    selfRisk: "140 kr"
   },
   {
-    name: "Mellan skåpbil",
-    description: "Mercedes Vito eller liknande (6m³)",
-    day: "950 kr",
-    weekend: "2 400 kr",
-    week: "5 200 kr",
-    extraPerKm: "2,75 kr"
+    name: "Lastbil 2",
+    description: "18 m³",
+    shortTerm: "759 kr",
+    day: "1 299 kr",
+    day1: "2 499 kr",
+    day2: "1 499 kr",
+    week: "7 999 kr",
+    weekFree: "9 999 kr",
+    month: "20 199 kr",
+    extraPerKm: "6,0 kr",
+    selfRisk: "140 kr"
   },
   {
-    name: "Stor skåpbil",
-    description: "Mercedes Sprinter eller liknande (12-15m³)",
-    day: "1 250 kr",
-    weekend: "3 200 kr",
-    week: "6 800 kr",
-    extraPerKm: "3,00 kr"
+    name: "Lastbil 3",
+    description: "20 m³",
+    shortTerm: "939 kr",
+    day: "1 519 kr",
+    day1: "3 099 kr",
+    day2: "1 749 kr",
+    week: "9 999 kr",
+    weekFree: "12 999 kr",
+    month: "26 259 kr",
+    extraPerKm: "7,5 kr",
+    selfRisk: "140 kr"
+  },
+  {
+    name: "Lastbil 2 + släp",
+    description: "18 m³ + 11 m³",
+    shortTerm: "1 199 kr",
+    day: "1 899 kr",
+    day1: "3 399 kr",
+    day2: "4 799 kr",
+    week: "10 999 kr",
+    weekFree: "13 599 kr",
+    month: "–",
+    extraPerKm: "8,0 kr",
+    selfRisk: "195 kr"
   }
 ];
 

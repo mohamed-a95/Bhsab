@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PriceTable from "./price-table";
 import RentalTable from "./rental-table";
+import VanPriceTable from "./van-price-table";
 import { 
   PersonalCarPricing, 
   VanPricing, 
@@ -39,11 +40,7 @@ const PricingTabs = () => {
       </TabsContent>
 
       <TabsContent value="skapbilar" className="mt-8 pt-4">
-        <PriceTable 
-          data={VanPricing} 
-          columns={["Fordonstyp", "1 dag", "Helg (fre-mån)", "Vecka (7 dagar)", "Extra per km", ""]} 
-          footerText="Alla priser inkluderar försäkring och 100 km/dag (150 km/dag för helg, 1000 km/vecka). Bränsle tillkommer. B-körkort gäller för alla skåpbilar."
-        />
+        <VanPriceTable />
       </TabsContent>
 
       <TabsContent value="slap" className="mt-8 pt-4">
