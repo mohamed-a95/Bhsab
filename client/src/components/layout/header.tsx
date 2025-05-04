@@ -97,10 +97,11 @@ interface NavLinkProps {
 
 const NavLink = ({ href, isActive, children }: NavLinkProps) => {
   return (
-    <Link href={href}>
-      <a className={`${isActive ? 'text-primary font-medium' : 'text-neutral-600 hover:text-primary font-medium'}`}>
-        {children}
-      </a>
+    <Link 
+      href={href} 
+      className={`${isActive ? 'text-primary font-medium' : 'text-neutral-600 hover:text-primary font-medium'}`}
+    >
+      {children}
     </Link>
   );
 };
