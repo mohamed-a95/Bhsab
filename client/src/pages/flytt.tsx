@@ -179,13 +179,7 @@ const Flytt = () => {
                 </p>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="font-semibold text-lg text-neutral-700 mb-2">Hur beräknas kostnaden för flytthjälp?</h3>
-                <p className="text-neutral-600">
-                  Kostnaden beräknas baserat på antal flyttare, tidsåtgång, avstånd, mängden gods samt eventuella tilläggstjänster. 
-                  Vi erbjuder en kostnadsfri besiktning före flytten för att ge en exakt offert.
-                </p>
-              </div>
+
             </div>
             
             <div className="mt-8 text-center">
