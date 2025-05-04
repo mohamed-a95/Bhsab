@@ -276,15 +276,6 @@ const Kontakt = () => {
                   </div>
                 </div>
               </div>
-              
-              <div className="bg-primary text-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold mb-3">Jourtelefon</h3>
-                <p className="mb-4">För akuta ärenden utanför kontorstid:</p>
-                <a href="tel:+46701234567" className="text-xl font-bold hover:text-neutral-100 flex items-center">
-                  <Phone className="mr-2" />
-                  070-123 45 67
-                </a>
-              </div>
             </div>
           </div>
         </div>
