@@ -24,11 +24,12 @@ const ServiceCard = ({ title, description, imgSrc, imgAlt, link }: ServiceCardPr
       <div className="p-6">
         <h3 className="text-xl font-semibold text-neutral-700 mb-2">{title}</h3>
         <p className="text-neutral-500 mb-4">{description}</p>
-        <Link href={link}>
-          <a className="text-primary font-medium hover:underline inline-flex items-center">
-            Läs mer
-            <ChevronRight className="ml-1 h-4 w-4" />
-          </a>
+        <Link 
+          href={link}
+          className="text-primary font-medium hover:underline inline-flex items-center"
+        >
+          Läs mer
+          <ChevronRight className="ml-1 h-4 w-4" />
         </Link>
       </div>
     </div>

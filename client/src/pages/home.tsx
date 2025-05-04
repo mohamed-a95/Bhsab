@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { CarFront, ChevronRight, PackageCheck, Truck } from "lucide-react";
 import ServiceCard from "@/components/ui/service-card";
+import { getImagePath } from "@/assets/index";
 
 const Home = () => {
   return (
@@ -16,17 +17,19 @@ const Home = () => {
               Vi erbjuder prisvärda och flexibla lösningar för alla dina behov i Stockholm och omnejd.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link href="/biluthyrning">
-                <a className="bg-white text-primary font-medium px-6 py-3 rounded-md shadow hover:bg-neutral-100 transition text-center flex items-center justify-center">
-                  <CarFront className="mr-2 h-5 w-5" />
-                  Hyr bil
-                </a>
+              <Link 
+                href="/biluthyrning"
+                className="bg-white text-primary font-medium px-6 py-3 rounded-md shadow hover:bg-neutral-100 transition text-center flex items-center justify-center"
+              >
+                <CarFront className="mr-2 h-5 w-5" />
+                Hyr bil
               </Link>
-              <Link href="/flytt">
-                <a className="bg-secondary text-white font-medium px-6 py-3 rounded-md shadow hover:bg-red-700 transition text-center flex items-center justify-center">
-                  <PackageCheck className="mr-2 h-5 w-5" />
-                  Boka flytt
-                </a>
+              <Link 
+                href="/flytt"
+                className="bg-secondary text-white font-medium px-6 py-3 rounded-md shadow hover:bg-red-700 transition text-center flex items-center justify-center"
+              >
+                <PackageCheck className="mr-2 h-5 w-5" />
+                Boka flytt
               </Link>
             </div>
           </div>
@@ -47,21 +50,21 @@ const Home = () => {
             <ServiceCard 
               title="Biluthyrning" 
               description="Vi erbjuder ett brett utbud av personbilar för uthyrning till konkurrenskraftiga priser."
-              imgSrc="/images/car-rental.jpg"
+              imgSrc={getImagePath('/images/car-rental.jpg')}
               imgAlt="Biluthyrning - Personbil"
               link="/biluthyrning"
             />
             <ServiceCard 
               title="Flytthjälp" 
               description="Professionell flytt av hem, kontor eller enstaka möbler med erfarna flyttare."
-              imgSrc="/images/moving-boxes.jpg"
+              imgSrc={getImagePath('/images/moving-boxes.jpg')}
               imgAlt="Flytthjälp - Flyttlådor"
               link="/flytt"
             />
             <ServiceCard 
               title="Transport" 
               description="Transport av varor och gods med våra skåpbilar och släp för alla typer av leveranser."
-              imgSrc="/images/transport-truck.jpg"
+              imgSrc={getImagePath('/images/transport-truck.jpg')}
               imgAlt="Transport - Lastbil"
               link="/transport"
             />
@@ -77,15 +80,17 @@ const Home = () => {
             Kontakta oss idag för att diskutera dina behov eller boka direkt online.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link href="/kontakt">
-              <a className="bg-primary text-white font-medium px-6 py-3 rounded-md shadow hover:bg-blue-700 transition">
-                Kontakta oss
-              </a>
+            <Link 
+              href="/kontakt"
+              className="bg-primary text-white font-medium px-6 py-3 rounded-md shadow hover:bg-blue-700 transition"
+            >
+              Kontakta oss
             </Link>
-            <Link href="/priser">
-              <a className="bg-white text-primary border border-primary font-medium px-6 py-3 rounded-md shadow hover:bg-neutral-50 transition">
-                Se våra priser
-              </a>
+            <Link 
+              href="/priser"
+              className="bg-white text-primary border border-primary font-medium px-6 py-3 rounded-md shadow hover:bg-neutral-50 transition"
+            >
+              Se våra priser
             </Link>
           </div>
         </div>
