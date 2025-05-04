@@ -44,7 +44,43 @@ const Header = ({ currentPath }: HeaderProps) => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
             <NavLink href="/" isActive={currentPath === "/"}>Hem</NavLink>
-            <NavLink href="/biluthyrning" isActive={currentPath === "/biluthyrning" || currentPath === "/priser"}>Biluthyrning</NavLink>
+            
+            {/* Biluthyrning Dropdown */}
+            <div className="relative group">
+              <NavLink 
+                href="/biluthyrning" 
+                isActive={currentPath === "/biluthyrning" || currentPath === "/priser"}
+              >
+                Biluthyrning
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  className="h-4 w-4 ml-1 inline-block transition-transform group-hover:rotate-180" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </NavLink>
+              
+              <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md p-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 z-50">
+                <NavLink 
+                  href="/biluthyrning" 
+                  isActive={currentPath === "/biluthyrning"} 
+                  className="block px-4 py-2 hover:bg-neutral-100 rounded-md"
+                >
+                  Översikt
+                </NavLink>
+                <NavLink 
+                  href="/priser" 
+                  isActive={currentPath === "/priser"} 
+                  className="block px-4 py-2 hover:bg-neutral-100 rounded-md"
+                >
+                  Prislista
+                </NavLink>
+              </div>
+            </div>
+            
             <NavLink href="/flytt" isActive={currentPath === "/flytt"}>Flytt</NavLink>
             <NavLink href="/transport" isActive={currentPath === "/transport"}>Transport</NavLink>
             <NavLink href="/kontakt" isActive={currentPath === "/kontakt"}>Kontakt</NavLink>
@@ -93,13 +129,14 @@ interface NavLinkProps {
   href: string;
   isActive: boolean;
   children: React.ReactNode;
+  className?: string;
 }
 
-const NavLink = ({ href, isActive, children }: NavLinkProps) => {
+const NavLink = ({ href, isActive, children, className = '' }: NavLinkProps) => {
   return (
     <Link 
       href={href} 
-      className={`${isActive ? 'text-primary font-medium' : 'text-neutral-600 hover:text-primary font-medium'}`}
+      className={`${isActive ? 'text-primary font-medium' : 'text-neutral-600 hover:text-primary font-medium'} ${className}`}
     >
       {children}
     </Link>
