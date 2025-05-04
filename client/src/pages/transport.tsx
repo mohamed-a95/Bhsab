@@ -89,31 +89,7 @@ const Transport = () => {
                   Hyr släpvagn eller takbox för dina transportbehov. Vi har olika storlekar för att möta dina specifika krav.
                 </p>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                  <div className="border border-neutral-200 rounded p-4">
-                    <h4 className="font-medium text-neutral-700 mb-2">Släpvagn</h4>
-                    <p className="text-neutral-500 mb-3">Flera olika storlekar tillgängliga</p>
-                    <p className="text-primary font-semibold">från 250 kr/dag</p>
-                  </div>
-                  
-                  <div className="border border-neutral-200 rounded p-4">
-                    <h4 className="font-medium text-neutral-700 mb-2">Takbox</h4>
-                    <p className="text-neutral-500 mb-3">Upp till 500 liters kapacitet</p>
-                    <p className="text-primary font-semibold">från 150 kr/dag</p>
-                  </div>
-                  
-                  <div className="border border-neutral-200 rounded p-4">
-                    <h4 className="font-medium text-neutral-700 mb-2">Täckt släp</h4>
-                    <p className="text-neutral-500 mb-3">Väderskyddad transport</p>
-                    <p className="text-primary font-semibold">från 350 kr/dag</p>
-                  </div>
-                  
-                  <div className="border border-neutral-200 rounded p-4">
-                    <h4 className="font-medium text-neutral-700 mb-2">Cykelhållare</h4>
-                    <p className="text-neutral-500 mb-3">För 2-4 cyklar</p>
-                    <p className="text-primary font-semibold">från 100 kr/dag</p>
-                  </div>
-                </div>
+                
                 
                 <Link 
                   href="/priser"
