@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Calendar, Package, Sofa, Shield, Check, X } from "lucide-react";
+import { getImagePath } from "@/assets/index";
 
 const Flytt = () => {
   return (
@@ -77,7 +78,7 @@ const Flytt = () => {
             
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="/images/moving-boxes.jpg" 
+                src={getImagePath('/images/moving-boxes.jpg')}
                 alt="Professionell flytthjälp" 
                 className="w-full h-full object-cover" 
                 width="800" 

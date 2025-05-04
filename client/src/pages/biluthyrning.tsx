@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import RentalTable from "@/components/ui/rental-table";
+import { getImagePath } from "@/assets/index";
 
 const Biluthyrning = () => {
   return (
@@ -21,7 +22,7 @@ const Biluthyrning = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center">
             <img
-              src="/images/car-rental.jpg"
+              src={getImagePath('/images/car-rental.jpg')}
               alt="Biluthyrning hos BHS"
               className="rounded-lg shadow-xl max-w-full md:max-w-3xl object-cover"
               width="1024"

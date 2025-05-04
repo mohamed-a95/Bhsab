@@ -6,6 +6,7 @@ import {
   Clock, 
   Caravan
 } from "lucide-react";
+import { getImagePath } from "@/assets/index";
 
 const Transport = () => {
   return (
@@ -35,7 +36,7 @@ const Transport = () => {
           {/* Transport Truck Image */}
           <div className="mb-12 flex justify-center">
             <img 
-              src="/images/transport-truck.jpg" 
+              src={getImagePath('/images/transport-truck.jpg')}
               alt="Transport och leverans med BHS" 
               className="rounded-lg shadow-xl max-w-full md:max-w-2xl"
               width="800"
@@ -71,11 +72,12 @@ const Transport = () => {
                   </li>
                 </ul>
                 
-                <Link href="/kontakt">
-                  <a className="inline-flex items-center bg-primary text-white font-medium px-6 py-3 rounded-md hover:bg-blue-700 transition">
-                    <Truck className="mr-2 h-5 w-5" />
-                    Boka transport
-                  </a>
+                <Link 
+                  href="/kontakt"
+                  className="inline-flex items-center bg-primary text-white font-medium px-6 py-3 rounded-md hover:bg-blue-700 transition"
+                >
+                  <Truck className="mr-2 h-5 w-5" />
+                  Boka transport
                 </Link>
               </div>
             </div>
@@ -113,11 +115,12 @@ const Transport = () => {
                   </div>
                 </div>
                 
-                <Link href="/priser">
-                  <a className="inline-flex items-center bg-primary text-white font-medium px-6 py-3 rounded-md hover:bg-blue-700 transition">
-                    <Caravan className="mr-2 h-5 w-5" />
-                    Se alla priser
-                  </a>
+                <Link 
+                  href="/priser"
+                  className="inline-flex items-center bg-primary text-white font-medium px-6 py-3 rounded-md hover:bg-blue-700 transition"
+                >
+                  <Caravan className="mr-2 h-5 w-5" />
+                  Se alla priser
                 </Link>
               </div>
             </div>
@@ -167,10 +170,11 @@ const Transport = () => {
           </div>
           
           <div className="mt-12 text-center">
-            <Link href="/kontakt">
-              <a className="bg-secondary text-white font-medium px-6 py-3 rounded-md hover:bg-red-700 transition">
-                Kontakta oss för att diskutera dina transportbehov
-              </a>
+            <Link 
+              href="/kontakt"
+              className="bg-secondary text-white font-medium px-6 py-3 rounded-md hover:bg-red-700 transition inline-block"
+            >
+              Kontakta oss för att diskutera dina transportbehov
             </Link>
           </div>
         </div>
